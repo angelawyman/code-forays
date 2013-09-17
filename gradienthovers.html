@@ -1,0 +1,277 @@
+<!doctype html>
+<head>
+<title> testing out pop hovers</title>
+<style>
+
+<link href='http://fonts.googleapis.com/css?family=Lato:700,900' rel='stylesheet' type='text/css'>
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  font-family:'Lato', sans-serif;
+  font-weight:700;
+}
+
+a {
+  color: tomato;
+  text-decoration: none;
+}
+
+.box {
+  font-family: "Lato",  Arial, sans-serif;
+  font-size: 1em;
+  text-align:center;
+  padding: 2em;
+  border: 1px solid #ccc;
+  display: block;
+  width: 20%;
+  height: 300px;
+  float: left;
+  margin: -1px 0 0 -1px;
+  color: white;                /* type on color and on black */
+ background: linear-gradient(
+     #EE82EE 33.33%,  #333 33.33%, #333 66.66%, white 66%
+  ); 
+  background-size: 100%  303%;
+  transition: all 0.8s ease;
+  animation: down-bump 0.4s ease;
+}
+
+#thistle:hover span{
+	color:#D8BFD8;
+}
+.box thistle {
+	  background: linear-gradient(#D88FD8 33.33%,  #333 33.33%, #333 66.66%, white 66%);
+	  background-size: 100%  303%;
+  transition: all 0.8s ease;
+  animation: down-bump 0.4s ease;
+}
+
+.box h2 {
+  line-height: 1.3
+  text-align: center;
+}
+.box h4 {
+  color: gray;
+}
+.gray-type:hover  {
+	color: white;
+}
+
+.box:hover {
+  background-position: 100% 100%;
+  animation: up-bump 0.4s ease;
+}
+.box:hover h2 {       /* main type color on hover a darker gray than dark gray*/
+  color: gray;     
+}
+.box:hover h2 span {  /* each color will have a span color ? */
+  color: #EE82EE;
+}
+.box .reverse:hover h2 {  /* main type color on hover */
+  color: darkgray;
+}
+.reverse:hover h4 span {   /* main type color on hover */
+  color: #EE82EE;
+}
+.box:hover h3 {   /* main type color on hover */
+  color: darkgray;
+}
+.box:hover h4 {
+	color:darkgray;  /* main type color on hover */
+}
+.box:active {
+	color: white;  /* main type color on box */
+}
+a:hover{
+	color:deeppink;   /* main type color on black */
+}
+a.selected, a.selected:hover{
+	color:aqua
+}
+.cloak {
+	line-height: 2em;
+}
+figcaption h2{
+	display:none;
+	opacity: 0;
+	color:0;
+	-webkit-transition: opacity 0.3s ease-out;
+	-moz-transition: opacity 0.3s ease-out;
+	-ms-transition: opacity 0.3s ease-out;
+	-o-transition: opacity 0.3s ease-out;
+	transition: opacity 0.3s ease-out;
+}
+figure:hover figcaption {
+	display:block;
+}
+
+@keyframes up-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 1.5em; }
+  100% { padding-top: 2em; }
+}
+@keyframes down-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 2.5em; }
+  100% { padding-top: 2em; }
+}
+
+}
+#plum:hover span{
+	color:#DDA0DD;
+}
+#orchid:hover span{
+	color:#DA70D6;
+}
+#violet:hover span{
+	color:#EE82EE;
+}
+#fuchsia:hover span{
+	color:#FF00FF;
+}
+#mediumorchid:hover span{
+	color:#BA55D3;
+}
+#darkorchid:hover span{
+	color:#9932CC;
+}
+#darkviolet:hover span{
+	color:#9400D3;
+}
+#blueviolet:hover span{
+	color:#8A2BE2;
+}
+#mediumpurple:hover span{
+	color:#9370DB;
+}
+#mediumslateblue:hover span{
+	color:#EE82EE;
+}
+#slateblue:hover span{
+	color:#EE82EE;
+}
+#darkslateblue:hover span{
+	color:#483D8B;
+}
+#indigo:hover span{
+	color:#4B0082;
+}
+
+</style>
+</head>
+
+<body>
+
+
+ <h1>170 color names <a target="_blank" href="http://www.popagency.com/">pop</a></h1> 
+
+<ul id="portfolio">
+
+	<li style="background: Fuchsia;" class="gray light">
+		<a href="http://www.alicebluecodes.com/aliceblue/ ">AliceBlue</a>
+	</li>
+
+		<a href="#" class="box">
+		<li><h2>Violet</h2></li>
+		<h4 style= "color:#EE82EE;">#EE82EE</h4>
+		<h4 style="cloak">#EE82EE</h4></li>
+
+		<fig caption style="color:green;"> <h2>Fig Caption</h2>
+		<a href="http://coolplace.com"></a>
+		</figcaption>
+		</a>
+
+		<a href="#" class="box">
+		 <h2>Medium Purple</h2>
+		 <h4>#9370DB</h4>
+		</a>
+
+		<a href="#" class="box" id="darkorchid">
+		 <h2> <span>Dark Orchid</span></h2>
+		 <h4 class="gray-type">#9932CC</h4>
+		</a>
+
+		<a href="#" class="box">
+		 <h2><span="color:red;">h2DimGray</span><br/></h2>
+		 <h4>h4click for black</h4>
+		</a>
+
+			<a href="#" class="box" id="darkorchid">
+		 <h2> <span>Dark Orchid</span></h2>
+		 <h4 class="gray-type">#9932CC</h4>
+		</a>
+			<a href="#" class="box" id="thistle">
+		 <h2> <span>Thistle</span></h2>
+		 <h4 class="gray-type">#D8BFD8</h4>
+		</a>
+			<a href="#" class="box" id="plum" style:"background: linear-gradient(
+     #EE82EE 33.33%,  #333 33.33%, #333 66.66%, white 66%;")>
+		 <h2> <span>Plum</span></h2>
+		 <h4 class="gray-type">#DDA0DD</h4>
+		</a>
+			<a href="#" class="box" id="orchid">
+		 <h2> <span>Orchid</span></h2>
+		 <h4 class="gray-type">#DA70D6</h4>
+		</a>
+			<a href="#" class="box" id="violet">
+		 <h2> <span>Violet</span></h2>
+		 <h4 class="gray-type">#EE82EE</h4>
+		</a>
+			<a href="#" class="box" id="fuschia">
+		 <h2> <span>Fuschia</span></h2>
+		 <h4 class="gray-type">#FF00FF</h4>
+		</a>
+			<a href="#" class="box" id="mediumorchid">
+		 <h2> <span>Medium Orchid</span></h2>
+		 <h4 class="gray-type">#BA55D3</h4>
+		</a>
+			<a href="#" class="box" id="darkorchid">
+		 <h2> <span>Dark Orchid</span></h2>
+		 <h4 class="gray-type">#9932CC</h4>
+		</a>
+			<a href="#" class="box" id="darkorchid">
+		 <h2> <span>Dark Orchid</span></h2>
+		 <h4 class="gray-type">#9932CC</h4>
+		</a>
+			<a href="#" class="box" id="darkorchid">
+		 <h2> <span>Dark Orchid</span></h2>
+		 <h4 class="gray-type">#9932CC</h4>
+		</a>
+			<a href="#" class="box" id="darkorchid">
+		 <h2> <span>Dark Orchid</span></h2>
+		 <h4 class="gray-type">#9932CC</h4>
+		</a>
+			<a href="#" class="box" id="darkorchid">
+		 <h2> <span>Dark Orchid</span></h2>
+		 <h4 class="gray-type">#9932CC</h4>
+		</a>
+			<a href="#" class="box" id="darkorchid">
+		 <h2> <span>Dark Orchid</span></h2>
+		 <h4 class="gray-type">#9932CC</h4>
+		</a>
+			<a href="#" class="box" id="darkorchid">
+		 <h2> <span>Dark Orchid</span></h2>
+		 <h4 class="gray-type">#9932CC</h4>
+		</a>
+
+
+<section class="color-5">
+				<nav class="cl-effect-5" id="cl-effect-5">
+					<a href="#cl-effect-5"><span data-hover="Seraglio">Seraglio</span></a>
+					<a href="#cl-effect-5"><span data-hover="Sumptuous">Sumptuous</span></a>
+					<a href="#cl-effect-5"><span data-hover="Scintilla">Scintilla</span></a>
+					<a href="#cl-effect-5"><span data-hover="Palimpsest">Palimpsest</span></a>
+					<a href="#cl-effect-5"><span data-hover="Assemblage">Assemblage</span></a>
+				</nav>
+			</section>
+
+
+
+
+</body>
+</html>
